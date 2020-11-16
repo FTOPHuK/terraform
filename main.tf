@@ -22,8 +22,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "test" {
   ami = data.aws_ami.ubuntu.id
-  instance_type = local.web_instance_type_map[terraform.workspace]
-  count = local.web_instance_count_map[terraform.workspace]
+  instance_type = "t3.micro"
   availability_zone = "eu-west-2a"
   monitoring = true
 
