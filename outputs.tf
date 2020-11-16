@@ -10,10 +10,4 @@ output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
 
-output "instance_ip_addr" {
-  value = local.web_instance_count_map[terraform.workspace]
-}
 
-output "network_id" {
-  value = local.web_instance_count_map[terraform.workspace]
-}
